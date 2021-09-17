@@ -17,7 +17,7 @@ public class UserCheckManager implements UserCheckService {
 			System.out.println("Parola 6 karakterden az olamaz.");
 			return false;
 		} else if (user.getPassword().isEmpty()) {
-			System.out.println("Parola boþ býrakýlamaz.");
+			System.out.println("Parola boÅŸ bÄ±rakÄ±lamaz.");
 			return false;
 		}
 		return true;
@@ -26,7 +26,7 @@ public class UserCheckManager implements UserCheckService {
 	@Override
 	public boolean checkFirstName(User user) {
 		if(user.getFirstName().length()<2) {
-			System.out.println("Adýnýz 2 karakterden az olamaz.");
+			System.out.println("AdÄ±nÄ±z 2 karakterden az olamaz.");
 			return false;
 		}
 		return true;
@@ -35,7 +35,7 @@ public class UserCheckManager implements UserCheckService {
 	@Override
 	public boolean checkLastName(User user) {
 		if(user.getLastName().length()<2) {
-			System.out.println("Soyadýnýz 2 karakterden az olamaz.");
+			System.out.println("SoyadÄ±nÄ±z 2 karakterden az olamaz.");
 			return false;
 		}
 		return true;
@@ -46,10 +46,10 @@ public class UserCheckManager implements UserCheckService {
 		String regex = "^[A-Z0-9._%+-]+@[A-Z0-9.-]+.(com|org|net|edu|gov|mil|biz|info|mobi)(.[A-Z]{2})?$";
 		Pattern pattern = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
 		if(pattern.matcher(user.getMail()).find()==false) {
-			System.out.println("Girdiðiniz mail e-posta formatýnda deðil.");
+			System.out.println("GirdiÄŸiniz mail e-posta formatÄ±nda deÄŸil.");
 			return false;
 		}else if(user.getMail().isEmpty()) {
-			System.out.println("Mail alaný boþ býrakýlamaz.");
+			System.out.println("Mail alanÄ± boÅŸ bÄ±rakÄ±lamaz.");
 			return false;
 		}
 		return true;
@@ -59,7 +59,7 @@ public class UserCheckManager implements UserCheckService {
 	public boolean mailIsValid(User user) {
 		boolean result = true;
 		if(mailList.contains(user.getMail())) {
-			System.out.println("Bu mail ile daha önce kayýt olunmuþ. Lütfen baþka bir mail adresi giriniz.");
+			System.out.println("Bu mail ile daha Ã¶nce kayÄ±t olunmuÅŸ. LÃ¼tfen baÅŸka bir mail adresi giriniz.");
 			result = false;
 		}else {
 			mailList.add(user.getMail());
