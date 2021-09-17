@@ -17,7 +17,7 @@ public class MailCheckManager implements MailCheckService {
 
 	@Override
 	public void verificationLink(String mail) {
-		System.out.println(mail + " doðrulama gönderildi.");
+		System.out.println(mail + " doÄŸrulama gÃ¶nderildi.");
 		
 	}
 
