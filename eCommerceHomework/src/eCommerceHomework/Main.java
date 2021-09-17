@@ -11,12 +11,12 @@ import eCommerceHomework.entities.concretes.User;
 public class Main {
 
 	public static void main(String[] args) {
-		User user1 = new User(1,"Çağrı","AKINCI","cagri.akinci@outlook.com","123456");
-		User user2 = new User(2,"Çağrı","AKINCI","abc.com","123456"); // E-posta hatası verir.
-		User user3 = new User(3,"Ç","AKINCI","cagri.akinci@outlook.com","123456"); // isim hatası verir.
-		User user4 = new User(4,"Çağrı","A","cagri.akinci@outlook.com","123456"); // soyisim hatası verir.
-		User user5 = new User(5,"Çağrı","AKINCI","cagri.akinci@outlook.com","123"); // şifre hatası verir.
-		User user6 = new User(6,"Çağrı","AKINCI","abcfsdas@asdgmail.com","123456"); // gmail hatası verir.
+		User user1 = new User(1,"Ã‡aÄŸrÄ±","AKINCI","cagri.akinci@outlook.com","123456");
+		User user2 = new User(2,"Ã‡aÄŸrÄ±","AKINCI","abc.com","123456"); // E-posta hatasÄ± verir.
+		User user3 = new User(3,"Ã‡","AKINCI","cagri.akinci@outlook.com","123456"); // isim hatasÄ± verir.
+		User user4 = new User(4,"Ã‡aÄŸrÄ±","A","cagri.akinci@outlook.com","123456"); // soyisim hatasÄ± verir.
+		User user5 = new User(5,"Ã‡aÄŸrÄ±","AKINCI","cagri.akinci@outlook.com","123"); // Ã¾ifre hatasÄ± verir.
+		User user6 = new User(6,"Ã‡aÄŸrÄ±","AKINCI","abcfsdas@asdgmail.com","123456"); // gmail hatasÄ± verir.
 		
 		UserManager userManager = new UserManager(new HibernateUserDao(),new MailCheckManager(), new UserCheckManager(), new GoogleManagerAdapter(), new GmailCheckManager());
 		userManager.signUp(user1);
