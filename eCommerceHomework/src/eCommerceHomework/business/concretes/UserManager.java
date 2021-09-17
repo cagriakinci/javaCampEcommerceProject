@@ -42,9 +42,9 @@ public class UserManager implements UserService {
 	public void logIn(User user) {
 		mailCheckService.verificationLink(user.getMail());
 		if (userDao.getMail(user.getMail()) && userDao.getMail(user.getMail()) == true) {
-			System.out.println("Giriş başarılı.");
+			System.out.println("GiriÅŸ baÅŸarÄ±lÄ±.");
 		} else {
-			System.out.println("Giriş başarısız.");
+			System.out.println("GiriÅŸ baÅŸarÄ±sÄ±z.");
 		}
 
 	}
